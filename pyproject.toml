@@ -1,0 +1,66 @@
+[project]
+name = "travel-planner-demo"
+version = "0.1.0"
+description = "MCP server that gives Claude my trips and a searchable travel journal (RAG over Qdrant)"
+readme = "README.md"
+authors = [
+    { name = "Sahar Darafsh" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastembed>=0.9.1",
+    "mcp[cli]>=2",
+    "pydantic-settings>=2.16.2",
+    "pyyaml>=6.0.3",
+    "qdrant-client>=1.20.0",
+]
+
+[project.scripts]
+travel-planner-demo = "travel_planner:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "travel_planner"  # the code keeps its package name
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+# E/F = pycodestyle errors + pyflakes (defaults), I = import order,
+# B = bugbear (likely bugs), UP = modern Python syntax.
+select = ["E", "F", "I", "B", "UP"]
+# Line length is the formatter's job; long strings (prompt text, errors) stay as written.
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "import-linter>=2.16",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+# Architecture rules, checked by `uv run lint-imports` (also in CI).
+[tool.importlinter]
+root_package = "travel_planner"
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Layers: server -> infrastructure -> application"
+type = "layers"
+layers = [
+    "travel_planner.server",
+    "travel_planner.infrastructure",
+    "travel_planner.application",
+]
+
+[[tool.importlinter.contracts]]
+name = "Application is plain Python: no MCP, database, vector store or config libraries"
+type = "forbidden"
+source_modules = ["travel_planner.application"]
+forbidden_modules = ["mcp", "qdrant_client", "fastembed", "pydantic", "pydantic_settings", "yaml", "sqlite3"]
