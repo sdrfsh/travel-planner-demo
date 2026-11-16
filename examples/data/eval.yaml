@@ -1,0 +1,41 @@
+# Retrieval eval set: each question has the one note section that should come back.
+# expected = "<note file name>#<section slug>". Optional city = metadata filter.
+- question: Which viewpoint did I love in Rome?
+  expected: rome-2025#giardino-degli-aranci
+- question: Where did I have great pasta?
+  expected: rome-2025#trattoria-da-lucia
+- question: Which famous fountain was too crowded?
+  expected: rome-2025#trevi-fountain-at-noon
+- question: Which old coffee house did I love?
+  expected: vienna-2024#cafe-sperl
+- question: Where did I eat a bad schnitzel?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+- question: Was the big wheel worth it?
+  expected: vienna-2024#prater-big-wheel
+- question: Which shrine with red gates did I visit early in the morning?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+- question: Where did I snack on street food?
+  expected: kyoto-2023#nishiki-market
+- question: Which bamboo forest disappointed me?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+- question: Where did I have a calm tofu meal in a garden?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+- question: Where can I see the whole city at sunset?
+  expected: barcelona-2022#bunkers-del-carmel
+- question: Which church had amazing stained glass?
+  expected: barcelona-2022#sagrada-familia
+- question: Where did I get terrible paella?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: Where did I drink vermouth with locals?
+  expected: barcelona-2022#bar-in-poble-sec
+- question: What was my overall impression of Kyoto?
+  expected: kyoto-2023#overall
+- question: Which restaurant did I love?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+  city: Kyoto
+- question: Which viewpoint did I love?
+  expected: barcelona-2022#bunkers-del-carmel
+  city: Barcelona
+- question: Where should I not eat?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+  city: Vienna
