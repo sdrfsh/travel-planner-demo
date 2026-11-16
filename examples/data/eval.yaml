@@ -1,41 +1,244 @@
 # Retrieval eval set: each question has the one note section that should come back.
 # expected = "<note file name>#<section slug>". Optional city = metadata filter.
-- question: Which viewpoint did I love in Rome?
-  expected: rome-2025#giardino-degli-aranci
-- question: Where did I have great pasta?
-  expected: rome-2025#trattoria-da-lucia
-- question: Which famous fountain was too crowded?
-  expected: rome-2025#trevi-fountain-at-noon
-- question: Which old coffee house did I love?
-  expected: vienna-2024#cafe-sperl
-- question: Where did I eat a bad schnitzel?
-  expected: vienna-2024#schnitzel-place-near-stephansplatz
-- question: Was the big wheel worth it?
-  expected: vienna-2024#prater-big-wheel
-- question: Which shrine with red gates did I visit early in the morning?
-  expected: kyoto-2023#fushimi-inari-at-dawn
-- question: Where did I snack on street food?
-  expected: kyoto-2023#nishiki-market
-- question: Which bamboo forest disappointed me?
-  expected: kyoto-2023#arashiyama-bamboo-grove
-- question: Where did I have a calm tofu meal in a garden?
-  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+# 100 questions: 6 per place section, 4 per "Overall" section.
+
+# --- Barcelona 2022 ---
 - question: Where can I see the whole city at sunset?
   expected: barcelona-2022#bunkers-del-carmel
-- question: Which church had amazing stained glass?
-  expected: barcelona-2022#sagrada-familia
-- question: Where did I get terrible paella?
-  expected: barcelona-2022#paella-on-la-rambla
-- question: Where did I drink vermouth with locals?
-  expected: barcelona-2022#bar-in-poble-sec
-- question: What was my overall impression of Kyoto?
-  expected: kyoto-2023#overall
-- question: Which restaurant did I love?
-  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
-  city: Kyoto
 - question: Which viewpoint did I love?
   expected: barcelona-2022#bunkers-del-carmel
   city: Barcelona
+- question: Where did I have a picnic with a view over the sea?
+  expected: barcelona-2022#bunkers-del-carmel
+- question: Which spot had a 360 degree view?
+  expected: barcelona-2022#bunkers-del-carmel
+- question: Which bus takes me to the hilltop viewpoint?
+  expected: barcelona-2022#bunkers-del-carmel
+- question: Where can I see both the city and the sea from above?
+  expected: barcelona-2022#bunkers-del-carmel
+
+- question: Which church had amazing stained glass?
+  expected: barcelona-2022#sagrada-familia
+- question: Which sight should I book online weeks ahead?
+  expected: barcelona-2022#sagrada-familia
+- question: Where was the light inside a building unforgettable?
+  expected: barcelona-2022#sagrada-familia
+- question: Which sight did I love?
+  expected: barcelona-2022#sagrada-familia
+  city: Barcelona
+- question: Should I pick a morning slot for the big basilica?
+  expected: barcelona-2022#sagrada-familia
+- question: Which famous cathedral is worth seeing from the inside?
+  expected: barcelona-2022#sagrada-familia
+
+- question: Where did I get terrible paella?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: What was the worst meal of the Barcelona trip?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: Where was I served microwaved frozen food?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: Which meal cost triple the price it was worth?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: Should I eat on La Rambla?
+  expected: barcelona-2022#paella-on-la-rambla
+- question: Which meal did I hate?
+  expected: barcelona-2022#paella-on-la-rambla
+  city: Barcelona
+
+- question: Where did I drink vermouth with locals?
+  expected: barcelona-2022#bar-in-poble-sec
+- question: Where can I get cheap pintxos?
+  expected: barcelona-2022#bar-in-poble-sec
+- question: Which bar felt lively but not touristy?
+  expected: barcelona-2022#bar-in-poble-sec
+- question: What time of day is best for pintxos at the local bar?
+  expected: barcelona-2022#bar-in-poble-sec
+- question: Which restaurant did I like?
+  expected: barcelona-2022#bar-in-poble-sec
+  city: Barcelona
+- question: Where did I go out in the evening on a weekday?
+  expected: barcelona-2022#bar-in-poble-sec
+
+- question: What was my overall impression of Barcelona?
+  expected: barcelona-2022#overall
+- question: Was Barcelona good for views and architecture?
+  expected: barcelona-2022#overall
+- question: Sum up my Barcelona trip in one line.
+  expected: barcelona-2022#overall
+- question: Was the food in Barcelona good overall?
+  expected: barcelona-2022#overall
+
+# --- Kyoto 2023 ---
+- question: Which shrine with red gates did I visit early in the morning?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+- question: Where did I hike through thousands of red gates?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+- question: Which sight is best before 7 am?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+  city: Kyoto
+- question: What time should I start the shrine hike?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+- question: Where was a hike peaceful with almost nobody around?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+- question: Which sight did I love?
+  expected: kyoto-2023#fushimi-inari-at-dawn
+  city: Kyoto
+
+- question: Where did I snack on street food?
+  expected: kyoto-2023#nishiki-market
+- question: Where did I eat tamagoyaki?
+  expected: kyoto-2023#nishiki-market
+- question: Where should I bring cash?
+  expected: kyoto-2023#nishiki-market
+- question: Which market was narrow and busy?
+  expected: kyoto-2023#nishiki-market
+- question: Where did I try Japanese pickles?
+  expected: kyoto-2023#nishiki-market
+- question: Which activity did I like?
+  expected: kyoto-2023#nishiki-market
+  city: Kyoto
+
+- question: Which bamboo forest disappointed me?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+- question: Which sight was much smaller than in the photos?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+- question: Where was I shoulder to shoulder with tour groups?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+- question: What is a calmer alternative to the bamboo grove?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+- question: Which sight should I skip?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+  city: Kyoto
+- question: Which sight did I dislike?
+  expected: kyoto-2023#arashiyama-bamboo-grove
+  city: Kyoto
+
+- question: Where did I have a calm tofu meal in a garden?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+- question: Which restaurant did I love?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+  city: Kyoto
+- question: Where did I eat a yudofu set menu?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+- question: Should I go for lunch or dinner at the tofu place?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+- question: What was the calmest meal of the Kyoto trip?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+- question: Where can I eat a simple meal near a temple?
+  expected: kyoto-2023#tofu-restaurant-near-nanzen-ji
+
+- question: What was my overall impression of Kyoto?
+  expected: kyoto-2023#overall
+- question: Why should I get up early in Kyoto?
+  expected: kyoto-2023#overall
+- question: What general advice do I have about Kyoto?
+  expected: kyoto-2023#overall
+- question: Should I visit the famous spots in Kyoto at midday?
+  expected: kyoto-2023#overall
+
+# --- Rome 2025 ---
+- question: Which viewpoint did I love in Rome?
+  expected: rome-2025#giardino-degli-aranci
+- question: Where is the quiet orange garden?
+  expected: rome-2025#giardino-degli-aranci
+- question: Which viewpoint had almost no crowds at sunset?
+  expected: rome-2025#giardino-degli-aranci
+  city: Rome
+- question: How early before sunset should I get to the orange garden?
+  expected: rome-2025#giardino-degli-aranci
+- question: Where should I bring water to watch the sunset?
+  expected: rome-2025#giardino-degli-aranci
+- question: Which viewpoint did I love?
+  expected: rome-2025#giardino-degli-aranci
+  city: Rome
+
+- question: Where did I have great pasta?
+  expected: rome-2025#trattoria-da-lucia
+- question: Which family restaurant in Trastevere did I love?
+  expected: rome-2025#trattoria-da-lucia
+- question: Where were the staff friendly?
+  expected: rome-2025#trattoria-da-lucia
+- question: Do I need to book a table at the trattoria?
+  expected: rome-2025#trattoria-da-lucia
+- question: Which restaurant did I love?
+  expected: rome-2025#trattoria-da-lucia
+  city: Rome
+- question: Where did I eat simple food done perfectly?
+  expected: rome-2025#trattoria-da-lucia
+
+- question: Which famous fountain was too crowded?
+  expected: rome-2025#trevi-fountain-at-noon
+- question: Which sight was too packed to enjoy?
+  expected: rome-2025#trevi-fountain-at-noon
+- question: When should I visit the Trevi Fountain?
+  expected: rome-2025#trevi-fountain-at-noon
+- question: Which sight did I dislike?
+  expected: rome-2025#trevi-fountain-at-noon
+  city: Rome
+- question: Where could I not get close because of the crowds?
+  expected: rome-2025#trevi-fountain-at-noon
+- question: Is the Trevi Fountain worth visiting at midday?
+  expected: rome-2025#trevi-fountain-at-noon
+
+- question: What was my overall impression of Rome?
+  expected: rome-2025#overall
+- question: How is Rome best explored?
+  expected: rome-2025#overall
+- question: Are the famous restaurants in Rome worth it?
+  expected: rome-2025#overall
+- question: What did I learn about Rome in general?
+  expected: rome-2025#overall
+
+# --- Vienna 2024 ---
+- question: Which old coffee house did I love?
+  expected: vienna-2024#cafe-sperl
+- question: Where did I eat great apple strudel?
+  expected: vienna-2024#cafe-sperl
+- question: Where can I sit for hours without being rushed?
+  expected: vienna-2024#cafe-sperl
+- question: Which cafe did I love?
+  expected: vienna-2024#cafe-sperl
+  city: Vienna
+- question: Where should I sit by the window in the afternoon?
+  expected: vienna-2024#cafe-sperl
+- question: Where can I have a calm coffee?
+  expected: vienna-2024#cafe-sperl
+  city: Vienna
+
+- question: Was the big wheel worth it?
+  expected: vienna-2024#prater-big-wheel
+- question: Which slow ride had a nice view?
+  expected: vienna-2024#prater-big-wheel
+- question: Should I buy Ferris wheel tickets online?
+  expected: vienna-2024#prater-big-wheel
+- question: Which touristy activity was still fun?
+  expected: vienna-2024#prater-big-wheel
+- question: Which activity did I like?
+  expected: vienna-2024#prater-big-wheel
+  city: Vienna
+- question: How can I skip the line at the amusement park ride?
+  expected: vienna-2024#prater-big-wheel
+
+- question: Where did I eat a bad schnitzel?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
 - question: Where should I not eat?
   expected: vienna-2024#schnitzel-place-near-stephansplatz
   city: Vienna
+- question: Where was the service rude?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+- question: Which restaurant next to the cathedral was a tourist trap?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+- question: Where was the schnitzel dry and overpriced?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+- question: Which meal did I hate?
+  expected: vienna-2024#schnitzel-place-near-stephansplatz
+  city: Vienna
+
+- question: What was my overall impression of Vienna?
+  expected: vienna-2024#overall
+- question: Is Vienna a good city for museums?
+  expected: vienna-2024#overall
+- question: What kind of trip is Vienna good for?
+  expected: vienna-2024#overall
+- question: Was Vienna good for slow days in cafes?
+  expected: vienna-2024#overall

@@ -26,7 +26,7 @@ uv run python -m travel_planner.infrastructure.ingest   # notes -> Qdrant (downl
 uv run python -m travel_planner.infrastructure.evaluate # retrieval quality: hit rate@5
 ```
 
-`examples/data` holds 4 fictional trips (Rome, Vienna, Kyoto, Barcelona) and an 18-question eval set.
+`examples/data` holds 4 fictional trips (Rome, Vienna, Kyoto, Barcelona) and a 100-question eval set.
 Replace them with your own notes in `data/notes/` (one `## Place` section per place) and re-run ingest.
 
 Test in the browser with the MCP Inspector:
@@ -60,11 +60,15 @@ Then ask: *"What did I love in Kyoto?"* or *"Where should I not eat in Barcelona
 
 ## 📊 Results
 
-Retrieval on the sample eval set (`examples/data/eval.yaml`, 18 questions, each with one expected section):
+Retrieval on the sample eval set (`examples/data/eval.yaml`, 100 questions, each with one expected section;
+6 per place section, 4 per "Overall" section, a few with a `city` filter):
 
 | Metric | Value |
 |---|---|
-| hit rate@5 | _run `evaluate` and fill in_ |
+| hit rate@5 | **94%** (94 / 100) |
+
+The 6 misses are questions worded differently from the note, e.g. *"Which famous cathedral is worth seeing
+from the inside?"* (expected Sagrada Família) or *"Where should I bring cash?"* (expected Nishiki Market).
 
 ## 🧭 Architecture
 
